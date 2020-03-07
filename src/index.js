@@ -48,7 +48,6 @@ function decode(expr) {
         }
     });
     let result = '';
-    let letter = '';
     const morseMap = arrCodeLetters.map(function (elem) {
         return elem.replace(/00/g, '').replace(/10/g, '.').replace(/11/g, '-');
     });
@@ -58,7 +57,6 @@ function decode(expr) {
             preResultMap[i] = ' '
         }
     }
-    result = result + MORSE_TABLE[letter];
     return preResultMap.join('')
 }
 module.exports = {
